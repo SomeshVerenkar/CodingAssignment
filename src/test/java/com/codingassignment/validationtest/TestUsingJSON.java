@@ -16,28 +16,22 @@ public class TestUsingJSON
 	public static void main(String[] args) throws IOException, ParseException 
 	{
 		JSONParser jsonParser = new JSONParser();
-		// JSONObject jsonObject = null;
+//		JSONObject jsonObject = null;
 
-		// Read JSON file
 		FileReader reader = new FileReader(".//src/test/resources/testdata.properties");
 
-		// Creating java object
 		Object obj = jsonParser.parse(reader);
-
-		// Converting java object into JSON object
 		JSONObject royalChallengersBangaloreJsonObj = (JSONObject) obj;
 
-		// Addition
 		String team = (String) royalChallengersBangaloreJsonObj.get("team");
 		String location = (String) royalChallengersBangaloreJsonObj.get("location");
 
 		System.out.println("team : " + team);
 		System.out.println("location : " + location);
 
-//			//Array to store JSON data
 		JSONArray rcbTeamArray = (JSONArray) royalChallengersBangaloreJsonObj.get("player");
 
-//			String arr[] = new String[rcbTeamArray.size()];
+//		String arr[] = new String[rcbTeamArray.size()];
 
 		System.out.println("RCB Team has only 4 foreign players");
 
